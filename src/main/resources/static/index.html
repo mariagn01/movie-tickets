@@ -5,9 +5,69 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Movie Tickets</title>
     <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<header>
+    <h1>Movie Tickets</h1>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Purchase tickets</h2>
+            <form class="form">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="movie-list" class="form-label">Movie</label>
+                        <div id="movie-list"></div>
+                        <span id="movie-error" class="error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="amount"/>
+                        <span id="amount-error" class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="firstname" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstname"/>
+                        <span id="firstname-error" class="error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label for="lastname" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastname"/>
+                        <span id="lastname-error" class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="phone">Phone number</label>
+                        <input type="text" class="form-control" id="phone"/>
+                        <span id="phone-error" class="error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label for="email">E-mail</label>
+                        <input type="text" class="form-control" id="email"/>
+                        <span id="email-error" class="error"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <button class="btn btn-dark" onclick="purchase()">Purchase ticket</button>
+    </div>
+
+    <div class="row">
+        <h2>Your tickets</h2>
+        <div id="ticketDisplay"></div>
+    </div>
+</div>
 
 </body>
 </html>

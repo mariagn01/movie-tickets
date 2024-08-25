@@ -1,0 +1,23 @@
+h1, h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.row {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.error {
+    font-weight: bold;
+    color: red;"
+}
