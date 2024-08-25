@@ -27,30 +27,36 @@
                     <div class="form-group col">
                         <label for="movie-list" class="form-label">Movie</label>
                         <div id="movie-list"></div>
+                        <span id="movie-error" class="error"></span>
                     </div>
                     <div class="form-group col">
                         <label for="amount" class="form-label">Amount</label>
                         <input type="number" class="form-control" id="amount"/>
+                        <span id="amount-error" class="error"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col">
                         <label for="firstname" class="form-label">First name</label>
                         <input type="text" class="form-control" id="firstname"/>
+                        <span id="firstname-error" class="error"></span>
                     </div>
                     <div class="form-group col">
                         <label for="lastname" class="form-label">Last name</label>
                         <input type="text" class="form-control" id="lastname"/>
+                        <span id="lastname-error" class="error">Test</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col">
                         <label for="phone">Phone number</label>
                         <input type="text" class="form-control" id="phone"/>
+                        <span id="phone-error" class="error"></span>
                     </div>
                     <div class="form-group col">
                         <label for="email">E-mail</label>
                         <input type="text" class="form-control" id="email"/>
+                        <span id="email-error" class="error"></span>
                     </div>
                 </div>
             </form>
@@ -61,9 +67,9 @@
         <button class="btn btn-dark" onclick="purchase()">Purchase ticket</button>
     </div>
 
-    <!-- Section for displaying validation errors to user -->
+    <!-- Section for displaying errors to user -->
     <div class="row">
-        <div class="error"></div>
+        <div id="generalError" class="error"></div>
     </div>
 
     <!-- Section for displaying purchased tickets -->
