@@ -32,7 +32,7 @@ header img {
     padding: 5rem;
     justify-content: space-between;
     gap: 2rem;
-    background: #FFF;
+    background: #fdfdfd;
     border-radius: 2rem;
     max-width: 70vh;
 }
@@ -46,11 +46,7 @@ header img {
 
 .error {
     font-weight: bold;
-    color: red;"
-}
-
-button {
-    margin-bottom: 2rem;
+    color: #db0000
 }
 
 #ticketDisplay {
