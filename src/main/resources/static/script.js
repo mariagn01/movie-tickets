@@ -32,6 +32,20 @@ function purchase() {
         $.post("/saveTicket", ticket, function () {
             getTickets();
         })
+
+        //Fail function to handle errors from server
+        .fail(function(jqXHR) {
+            const json = $.parseJSON(jqXHR.responseText);
+            $("#generalError").html(json.message);
+        });
+
+        //Emptying inputfields
+        $("#movie").val("");
+        $("#amount").val("");
+        $("#firstname").val("");
+        $("#lastname").val("");
+        $("#phone").val("");
+        $("#email").val("")
     }
 }
 
@@ -44,7 +58,13 @@ function validateInputs() {
     let email = $("#email").val()
 
     //Removing previous error messages, if any
-    $("#error").text("");
+    $("#movie-error").html("");
+    $("#amount-error").html("");
+    $("#firstname-error").html("");
+    $("#lastname-error").html("");
+    $("#phone-error").html("");
+    $("#email-error").html("");
+    $("#error").html("");
 
     //Validation for each input field, displaying inline errors to user
     if (!movie) {
