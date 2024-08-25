@@ -1,13 +1,35 @@
-h1, h2 {
+body {
+    background: #222;
+}
+
+h1 {
+    color: #FFF;
     text-align: center;
+    font-family: "New Amsterdam";
+    font-size: 5rem;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+header {
+    padding: 5rem;
+    background: #B20710;
+    margin-bottom: 5rem;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     margin: auto;
+    padding: 5rem;
     justify-content: space-between;
     gap: 2rem;
+    background: #FFF;
+    border-radius: 2rem;
+    max-width: 70vh;
 }
 
 .row {
