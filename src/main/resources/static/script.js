@@ -19,7 +19,20 @@ function displayMovieList(movielist) {
 }
 
 function purchase() {
+    if (validateInputs()) {
+        const ticket = {
+            movie: $("#movie").val(),
+            amount: $("#amount").val(),
+            firstname: $("#firstname").val(),
+            lastname: $("#lastname").val(),
+            phone: $("#phone").val(),
+            email: $("#email").val()
+        }
 
+        $.post("/saveTicket", ticket, function () {
+            getTickets();
+        })
+    }
 }
 
 function validateInputs() {
@@ -62,4 +75,23 @@ function validateInputs() {
         return false;
     }
     return true; //returns true if every validation is ok
+}
+
+function getTickets () {
+    $.get("/getTickets", function (tickets) {
+        displayTickets(tickets);
+    })
+}
+
+function displayTickets (tickets) {
+    let ticketList = "<table class='table'><tr>" +
+        "<th>Movie</th><th>Amount</th><th>First name</th><th>Last name</th><th>Phone number</th><th>E-mail</th>" +
+        "</tr>";
+    for (const ticket of tickets){
+        ticketList+="<tr>";
+        ticketList+="<td>"+ticket.movie+"</td><td>"+ticket.amount+"</td><td>"+ticket.firstname+"</td><td>"+ticket.lastname+"</td><td>"+ticket.phone+"</td><td>"+ticket.email+"</td>";
+        ticketList+="</tr>";
+    }
+    ticketList += "</table>"
+    $("#ticketDisplay").html(ticketList);
 }
