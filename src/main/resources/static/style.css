@@ -29,6 +29,7 @@ header img {
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-bottom: 5rem;
     padding: 5rem;
     justify-content: space-between;
     gap: 2rem;
