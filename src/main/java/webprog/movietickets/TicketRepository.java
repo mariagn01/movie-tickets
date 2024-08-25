@@ -31,8 +31,7 @@ public class TicketRepository {
     public List<Ticket> getTickets() {
         String sql = "SELECT * FROM Ticket";
         try {
-            List<Ticket> allTickets = db.query(sql, new BeanPropertyRowMapper<>(Ticket.class));
-            return allTickets;
+            return db.query(sql, new BeanPropertyRowMapper<>(Ticket.class));
         } catch (Exception e) {
             logger.error("Error in getTickets: "+e);
             return null;
