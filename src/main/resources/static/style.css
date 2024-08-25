@@ -1,5 +1,5 @@
 body {
-    background: #222;
+    background: radial-gradient(circle, hsla(0, 86%, 19%, 1) 0%, hsla(0, 0%, 13%, 1) 100%);
 }
 
 h1 {
@@ -16,7 +16,7 @@ h2 {
 
 header {
     padding: 5rem;
-    background: #B20710;
+    background: linear-gradient(135deg, hsla(0, 78%, 29%, 1) 13%, hsla(0, 100%, 43%, 1) 100%);
     margin-bottom: 5rem;
 }
 
