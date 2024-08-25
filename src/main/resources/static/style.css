@@ -5,7 +5,7 @@ body {
 h1 {
     color: #FFF;
     text-align: center;
-    font-family: "New Amsterdam";
+    font-family: "New Amsterdam", sans-serif;
     font-size: 5rem;
 }
 
@@ -18,6 +18,11 @@ header {
     padding: 5rem;
     background: #B20710;
     margin-bottom: 5rem;
+}
+
+header img {
+    max-width: 7vh;
+    padding-left: 1rem;
 }
 
 .container {
@@ -42,4 +47,21 @@ header {
 .error {
     font-weight: bold;
     color: red;"
+}
+
+button {
+    margin-bottom: 2rem;
+}
+
+#ticketDisplay {
+    text-align: center;
+    color: #222222;
+}
+
+/*Stacking input fields above each other for smaller screens */
+@media (max-width: 800px) {
+    .row {
+       flex-direction: column;
+    }
+
 }
