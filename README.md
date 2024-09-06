@@ -21,7 +21,7 @@ This fullstack web application allows users to order movie tickets. Users can vi
 ## Screenshots
 ![Full site](src%2Fmain%2Fresources%2Fstatic%2Fimages%2FScreenshot1.png)
 ![Ticket purchased](src%2Fmain%2Fresources%2Fstatic%2Fimages%2FScreenshot2.png)
-![Error handling](src%2Fmain%2Fresources%2Fstatic%2Fimages%2FScreenshot%203.png)
+![Error handling](src%2Fmain%2Fresources%2Fstatic%2Fimages%2FScreenshot%23.png)
 
 ## How to Run the Project
 - Clone the repository and open the project in IntelliJ.
