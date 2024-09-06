@@ -2,6 +2,7 @@ package webprog.movietickets;
 
 //POJO class for the ticket-object, with constructor and getters/setters
 public class Ticket {
+    private int id;
     private String movie;
     private String amount;
     private String firstname;
@@ -9,7 +10,8 @@ public class Ticket {
     private String phone;
     private String email;
 
-    public Ticket(String movie, String amount, String firstname, String lastname, String phone, String email) {
+    public Ticket(int id, String movie, String amount, String firstname, String lastname, String phone, String email) {
+        this.id = id;
         this.movie = movie;
         this.amount = amount;
         this.firstname = firstname;
@@ -20,6 +22,12 @@ public class Ticket {
 
     public Ticket() {}
 
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getMovie() {
         return movie;
     }

@@ -110,8 +110,13 @@ function displayTickets (tickets) {
     for (const ticket of tickets){
         ticketList+="<tr>";
         ticketList+="<td>"+ticket.movie+"</td><td>"+ticket.amount+"</td><td>"+ticket.firstname+"</td><td>"+ticket.lastname+"</td><td>"+ticket.phone+"</td><td>"+ticket.email+"</td>";
+        ticketList+="<td><button class='btn btn-danger' onclick='deleteTicket('+ticket.id+')'>Delete</button></td>";
         ticketList+="</tr>";
     }
     ticketList += "</table>"
     $("#ticketDisplay").html(ticketList);
+}
+
+function deleteTicket (id) {
+
 }
