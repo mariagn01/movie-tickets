@@ -15,6 +15,7 @@ public class TicketRepository {
     @Autowired
     private JdbcTemplate db;
 
+    //Using a logger for server-side error handling 
     Logger logger = LoggerFactory.getLogger(TicketRepository.class);
 
     public boolean saveTicket(Ticket ticket) {

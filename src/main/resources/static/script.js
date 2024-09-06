@@ -18,6 +18,7 @@ function displayMovieList(movielist) {
     $("#movie-list").html(movies);
 }
 
+//Function for saving a purchased ticket in database
 function purchase() {
     if (validateInputs()) {
         const ticket = {
@@ -49,6 +50,7 @@ function purchase() {
     }
 }
 
+//Function for client-side validation of input in form
 function validateInputs() {
     let movie = $("#movie").val()
     let amount = $("#amount").val()
@@ -97,6 +99,7 @@ function validateInputs() {
     return true; //returns true if every validation is ok
 }
 
+//Functions for displaying and formatting purchased tickets
 function getTickets () {
     $.get("/getTickets", function (tickets) {
         displayTickets(tickets);
@@ -117,6 +120,7 @@ function displayTickets (tickets) {
     $("#ticketDisplay").html(ticketList);
 }
 
+//Function for deleting a ticket
 function deleteTicket (id) {
     const url = "/deleteTicket?id="+id;
     $.get(url, function () {
