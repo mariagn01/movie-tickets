@@ -51,4 +51,9 @@ public class TicketController {
             return null;
         }
     }
+
+    @GetMapping("/deleteTicket")
+    public void deleteTicket (int id) {
+        rep.deleteTicket(id);
+    }
 }

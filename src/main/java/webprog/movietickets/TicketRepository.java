@@ -37,4 +37,9 @@ public class TicketRepository {
             return null;
         }
     }
+
+    public void deleteTicket(int id) {
+        String sql = "DELETE FROM Ticket WHERE id=?";
+        db.update(sql, id);
+    }
 }

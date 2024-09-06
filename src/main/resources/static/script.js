@@ -118,5 +118,8 @@ function displayTickets (tickets) {
 }
 
 function deleteTicket (id) {
-
+    const url = "/deleteTicket?id="+id;
+    $.get(url, function () {
+        getTickets()
+    })
 }
